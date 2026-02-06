@@ -1,6 +1,5 @@
-package com.order.food.repository;
+package com.order.food;
 
-import com.order.dto.Food;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

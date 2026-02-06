@@ -1,4 +1,4 @@
-package com.order.dto;
+package com.order.food;
 
 import jakarta.persistence.*;
 import lombok.Data;

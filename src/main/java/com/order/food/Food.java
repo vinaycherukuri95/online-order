@@ -1,11 +1,13 @@
-package com.order.dto;
+package com.order.food;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Setter;
 
 @Data
 @Entity
 @Table(name = "foods")
+@Setter
 public class Food {
 
     @Id

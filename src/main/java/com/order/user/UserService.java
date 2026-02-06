@@ -1,7 +1,6 @@
 package com.order.user;
 
 
-import com.order.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

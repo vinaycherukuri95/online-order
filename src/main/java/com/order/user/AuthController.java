@@ -1,6 +1,5 @@
 package com.order.user;
 
-import com.order.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,7 +30,9 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody User user) {
         User loggedUser = service.login(user.getEmail(), user.getPassword());
+        System.out.println("Login user"+loggedUser);
         if(loggedUser != null){
+            
             return ResponseEntity.ok("Login Successful");
         }else{
             return  ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid Credentials");

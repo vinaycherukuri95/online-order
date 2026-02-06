@@ -1,9 +1,5 @@
 package com.order.food;
 
-import com.order.dto.Food;
-import com.order.dto.Restaurant;
-import com.order.food.repository.FoodRepository;
-import com.order.food.repository.RestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -45,7 +41,7 @@ public class FoodController {
         // Save image to external folder
         String folder = "src/main/resources/static/images/";
         Files.createDirectories(Paths.get(folder));
-        String filename = System.currentTimeMillis() + "-" + name;
+        String filename = System.currentTimeMillis() + "-" + name+".jpg";
         Path filePath = Paths.get(folder + filename);
         Files.write(filePath, image.getBytes());
         
