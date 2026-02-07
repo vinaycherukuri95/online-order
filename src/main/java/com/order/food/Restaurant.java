@@ -2,6 +2,7 @@ package com.order.food;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class Restaurant {
     private String name;
 
     @OneToMany(mappedBy = "restaurant")
+    @ToString.Exclude
     private List<Food> foods;
     
 }

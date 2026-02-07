@@ -7,7 +7,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/orders")
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:3000")
 public class OrderController {
 
     @Autowired
@@ -15,11 +15,13 @@ public class OrderController {
 
     @PostMapping("/place/{userId}")
     public Order placeOrder(@PathVariable Long userId) {
+        System.out.println("Place order: "+userId);
         return orderService.placeOrder(userId);
     }
 
     @GetMapping("/{userId}")
     public List<Order> getOrders(@PathVariable Long userId) {
+        System.out.println("get orders: "+userId);
         return orderService.getOrders(userId);
     }
 }
